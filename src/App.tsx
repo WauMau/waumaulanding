@@ -11,33 +11,34 @@ import {
 const OnlyFansIcon = () => (
   <svg 
     viewBox="0 0 24 24" 
-    width="24" 
-    height="24" 
-    stroke="currentColor" 
-    fill="none" 
-    strokeWidth="2" 
-    strokeLinecap="round" 
-    strokeLinejoin="round"
+    width="32" 
+    height="32" 
+    fill="currentColor"
   >
-    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
-    <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
-    <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
   </svg>
 );
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-gray-800 to-black text-white overflow-hidden">
-      {/* Hero Section */}
-      <div className="relative h-screen flex flex-col items-center justify-center px-4">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1533134486753-c833f0ed4866?q=80&w=2070')] bg-cover bg-center opacity-10"></div>
+    <div className="min-h-screen bg-[#0A0A0A] text-white overflow-hidden">
+      {/* Gradient overlay */}
+      <div className="fixed inset-0 bg-gradient-to-b from-[#1A1A1A] via-[#0D0D0D] to-[#050505] opacity-80"></div>
+      
+      {/* Subtle pattern overlay */}
+      <div className="fixed inset-0 backdrop-filter backdrop-blur-[100px] bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1IiBoZWlnaHQ9IjUiPgo8cmVjdCB3aWR0aD0iNSIgaGVpZ2h0PSI1IiBmaWxsPSIjMDAwIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDVMNSAwWk02IC00TDQgNlpNLTQgNkw2IC00WiIgc3Ryb2tlPSIjMjIyIiBzdHJva2Utd2lkdGg9IjEiPjwvcGF0aD4KPC9zdmc+')] opacity-10"></div>
 
-        {/* Animated background elements */}
+      {/* Hero Section */}
+      <div className="relative min-h-screen flex flex-col items-center justify-center px-4">
+        {/* Ambient light effects */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-purple-500/20 rounded-full filter blur-3xl animate-float"></div>
-          <div
-            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full filter blur-3xl animate-float"
-            style={{ animationDelay: '-3s' }}
+          <div 
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full filter blur-[150px] animate-float"
+            style={{ animationDuration: '20s' }}
+          ></div>
+          <div 
+            className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-900/20 rounded-full filter blur-[150px] animate-float"
+            style={{ animationDuration: '25s', animationDelay: '-10s' }}
           ></div>
         </div>
 
@@ -58,7 +59,7 @@ function App() {
       </div>
 
       {/* Social Links Section */}
-      <div className="max-w-4xl mx-auto px-4 py-20">
+      <div className="relative max-w-4xl mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           <SocialCard
             icon={<Youtube className="w-8 h-8" />}
@@ -148,7 +149,7 @@ function SocialCard({
       rel="noopener noreferrer"
       className={`opacity-0 animate-[fadeIn_0.5s_ease-out_forwards] block p-6 rounded-xl backdrop-blur-sm 
         transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 ${color}
-        bg-gray-800/50 group ${className}`}
+        bg-gray-800/30 group ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-center space-x-4">
