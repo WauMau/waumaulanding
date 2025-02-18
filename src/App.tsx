@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Youtube,
   Send,
@@ -142,14 +142,37 @@ function SocialCard({
   delay,
   className = '',
 }: SocialCardProps) {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          }
+        });
+      },
+      { threshold: 0.5 } // Триггер срабатывает, когда 50% элемента становится видимым
+    );
+
+    const element = document.getElementById(title); // Используем title как уникальный идентификатор
+    if (element) observer.observe(element);
+
+    return () => {
+      if (element) observer.unobserve(element);
+    };
+  }, [title]);
+
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`opacity-0 animate-[fadeIn_0.5s_ease-out_forwards] block p-6 rounded-xl backdrop-blur-sm 
+      className={`opacity-0 ${isVisible ? 'animate-fadeIn' : ''} block p-6 rounded-xl backdrop-blur-sm 
         transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 ${color}
         bg-gray-800/30 group ${className}`}
+      id={title} // Устанавливаем ID для наблюдения
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-center space-x-4">
