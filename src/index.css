@@ -42,3 +42,23 @@
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
 }
+
+.neon-yellow {
+  position: relative;
+  box-shadow: 0 0 7px #ffd32a,
+              0 0 10px #ffd32a,
+              0 0 21px #ffd32a,
+              0 0 42px rgba(255, 211, 42, 0.5),
+              inset 0 0 32px rgba(255, 211, 42, 0.2);
+  border: 1px solid rgba(255, 211, 42, 0.4) !important;
+}
+
+.neon-orange {
+  position: relative;
+  box-shadow: 0 0 7px #ff9f43,
+              0 0 10px #ff9f43,
+              0 0 21px #ff9f43,
+              0 0 42px rgba(255, 159, 67, 0.5),
+              inset 0 0 32px rgba(255, 159, 67, 0.2);
+  border: 1px solid rgba(255, 159, 67, 0.4) !important;
+}
