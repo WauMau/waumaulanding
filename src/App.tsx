@@ -3,11 +3,27 @@ import {
   Youtube,
   Send,
   Instagram,
-  Heart,
   Star,
   Award,
   ChevronDown,
 } from 'lucide-react';
+
+const OnlyFansIcon = () => (
+  <svg 
+    viewBox="0 0 24 24" 
+    width="24" 
+    height="24" 
+    stroke="currentColor" 
+    fill="none" 
+    strokeWidth="2" 
+    strokeLinecap="round" 
+    strokeLinejoin="round"
+  >
+    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" />
+    <path d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z" />
+    <path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+  </svg>
+);
 
 function App() {
   return (
@@ -92,7 +108,7 @@ function App() {
           />
 
           <SocialCard
-            icon={<Heart className="w-8 h-8" />}
+            icon={<OnlyFansIcon />}
             title="OnlyFans"
             description="Exclusive content"
             link="https://onlyfans.com"
