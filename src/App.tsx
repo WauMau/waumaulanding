@@ -76,8 +76,9 @@ function App() {
             title="Boosty"
             description="Support my work"
             link="https://boosty.to"
-            color="hover:bg-yellow-500/10 hover:border-yellow-500"
+            color=""
             delay={300}
+            className="neon-yellow"
           />
 
           <SocialCard
@@ -85,8 +86,9 @@ function App() {
             title="Patreon"
             description="Become a patron"
             link="https://patreon.com"
-            color="hover:bg-orange-500/10 hover:border-orange-500"
+            color=""
             delay={400}
+            className="neon-orange"
           />
 
           <SocialCard
@@ -110,6 +112,7 @@ interface SocialCardProps {
   link: string;
   color: string;
   delay: number;
+  className?: string;
 }
 
 function SocialCard({
@@ -119,15 +122,16 @@ function SocialCard({
   link,
   color,
   delay,
+  className = '',
 }: SocialCardProps) {
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className={`opacity-0 animate-[fadeIn_0.5s_ease-out_forwards] block p-6 border border-gray-700 rounded-xl backdrop-blur-sm 
+      className={`opacity-0 animate-[fadeIn_0.5s_ease-out_forwards] block p-6 rounded-xl backdrop-blur-sm 
         transition-all duration-300 transform hover:scale-105 hover:-translate-y-2 ${color}
-        bg-gray-800/50 group`}
+        bg-gray-800/50 group ${className}`}
       style={{ animationDelay: `${delay}ms` }}
     >
       <div className="flex items-center space-x-4">
