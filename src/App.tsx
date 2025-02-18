@@ -3,7 +3,7 @@ import {
   Youtube,
   Send,
   Instagram,
-  Linkedin,
+  Heart,
   Star,
   Award,
   ChevronDown,
@@ -76,7 +76,7 @@ function App() {
             title="Boosty"
             description="Support my work"
             link="https://boosty.to"
-            color="hover:bg-orange-600/10 hover:border-orange-600"
+            color=""
             delay={300}
             className="neon-yellow"
           />
@@ -86,17 +86,17 @@ function App() {
             title="Patreon"
             description="Become a patron"
             link="https://patreon.com"
-            color="hover:bg-white-600/10 hover:border-white-600"
+            color=""
             delay={400}
             className="neon-orange"
           />
 
           <SocialCard
-            icon={<Linkedin className="w-8 h-8" />}
+            icon={<Heart className="w-8 h-8" />}
             title="OnlyFans"
-            description="NSFW Content"
-            link="https://linkedin.com"
-            color="hover:bg-blue-600/10 hover:border-blue-600"
+            description="Exclusive content"
+            link="https://onlyfans.com"
+            color=""
             delay={500}
             className="neon-blue"
           />
