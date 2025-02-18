@@ -62,3 +62,13 @@
               inset 0 0 32px rgba(255, 159, 67, 0.2);
   border: 1px solid rgba(255, 159, 67, 0.4) !important;
 }
+
+.neon-blue {
+  position: relative;
+  box-shadow: 0 0 7px #00d2ff,
+              0 0 10px #00d2ff,
+              0 0 21px #00d2ff,
+              0 0 42px rgba(0, 210, 255, 0.5),
+              inset 0 0 32px rgba(0, 210, 255, 0.2);
+  border: 1px solid rgba(0, 210, 255, 0.4) !important;
+}
