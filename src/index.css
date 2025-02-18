@@ -35,12 +35,25 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .animate-glow {
   animation: glow 3s ease-in-out infinite;
+}
+
+.animate-fadeIn {
+  animation: fadeIn 3s ease-out forwards; /* Здесь установлена длительность 1 секунда */
 }
 
 .neon-yellow {
