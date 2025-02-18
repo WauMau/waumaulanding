@@ -53,7 +53,7 @@
 }
 
 .animate-fadeIn {
-  animation: fadeIn 3s ease-out forwards; /* Здесь установлена длительность 1 секунда */
+  animation: fadeIn 3s ease-out forwards; /* Здесь установлена длительность 3 секунды */
 }
 
 .neon-yellow {
